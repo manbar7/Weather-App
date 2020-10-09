@@ -1,0 +1,14 @@
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  justify-content: center;
+
+  .default-cities {
+    display: flex;
+    justify-content: center;
+  }
+}
+

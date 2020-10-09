@@ -1,0 +1,10 @@
+<div class="container">
+  <mat-card class="card" *ngIf="weatherResults">
+    <img [src]="weatherResults.icon" alt="icon" class="icon" />
+    <p>{{weatherResults.city + ', ' + weatherResults.country}}</p>
+    <p>Afterwind: {{weatherResults.afterWind}}</p>
+    <p>Temperature: {{weatherResults.temperature}}</p>
+    <p>Sky: {{weatherResults.sky}}</p>
+    <p>Humidity: {{weatherResults.humidity}}</p>
+  </mat-card>
+</div>

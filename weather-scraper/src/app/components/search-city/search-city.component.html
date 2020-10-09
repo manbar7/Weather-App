@@ -1,0 +1,22 @@
+<div class="container">
+  <p>Make sure it follows this format: City, Country</p>
+  <form class="form">
+    <mat-form-field class="example-full-width">
+      <input
+        type="text"
+        placeholder="Ex. Tel Aviv, Israel"
+        aria-label="City and Country"
+        matInput
+        [(ngModel)]="searchValue"
+        name="search-value"
+      />
+    </mat-form-field>
+
+    <button mat-icon-button (click)="searchWeatherData()">
+      <mat-icon>search</mat-icon>
+      Search
+    </button>
+
+  </form>
+  <mat-spinner diameter="30" *ngIf="loadingResults"></mat-spinner>
+</div>

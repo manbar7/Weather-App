@@ -1,0 +1,17 @@
+<div class="container">
+
+
+  <app-search-city
+    (searchWeather)="getWeather($event)"
+    [loadingResults]="loadingResults">
+  </app-search-city>
+
+  <div class="default-cities" *ngIf="!(weatherResults$ | async)">
+    <app-weather-results [weatherResults]="cityOne$ | async"></app-weather-results>
+    <app-weather-results [weatherResults]="cityTwo$ | async"></app-weather-results>
+  </div>
+
+
+  <app-weather-results [weatherResults]="weatherResults$ | async"></app-weather-results>
+</div>
+
